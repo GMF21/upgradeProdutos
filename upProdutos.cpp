@@ -39,11 +39,6 @@ void exibirProdutos(const produto produtos[], int quantidadeAtual) {
 void salvarProdutos(const produto produtos[], int quantidadeAtual) {
     ofstream file("produtos.txt");
 
-    if (!file.is_open()) {
-        cout << "Erro ao abrir o arquivo para salvar os produtos" << endl;
-        return;
-    }
-
     for (int i = 0; i < quantidadeAtual; i++) {
         file << produtos[i].Id << ",";
         file << produtos[i].nome << ",";
