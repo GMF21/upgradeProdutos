@@ -24,15 +24,13 @@ void adicionarProduto(produto produtos[], int& quantidadeAtual) {
 }
 
 void exibirProdutos(const produto produtos[], int quantidadeAtual) {
-    for (int i = 0; i < quantidadeAtual; i++) {
-        if (produtos[i].status == 'A') {  // Exibir apenas produtos ativos
+    for (int i = 0; i < quantidadeAtual; i++){
             cout << "Produto " << produtos[i].Id << ":" << endl;
             cout << "Nome: " << produtos[i].nome << endl;
             cout << "Preço: " << produtos[i].preco << endl;
             cout << "Quantidade: " << produtos[i].quantidade << endl;
-            cout << "Status: " << (produtos[i].status == 'A' ? "Ativo" : "Eliminado") << endl;
             cout << "-------------------------" << endl;
-        }
+        
     }
 }
 
