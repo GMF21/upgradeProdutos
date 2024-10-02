@@ -52,9 +52,9 @@ void salvarProdutos(const produto produtos[], int quantidadeAtual) {
 float calcularValorTotal(const produto produtos[], int quantidadeAtual) {
     float valorTotal = 0.0;
     for (int i = 0; i < quantidadeAtual; i++) {
-        if (produtos[i].status == 'A') {  // Apenas produtos ativos são considerados
-            valorTotal += produtos[i].preco * produtos[i].quantidade;
-        }
+        
+        valorTotal += produtos[i].preco * produtos[i].quantidade;
+        
     }
     return valorTotal;
 }
