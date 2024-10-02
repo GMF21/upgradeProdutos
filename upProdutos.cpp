@@ -8,7 +8,7 @@ struct produto {
     string nome;
     float preco;
     int quantidade;
-    char status;  // 'A' para Ativo, 'D' para Eliminado
+    char status;  // 'A' para Ativo, 'D' para eliminado
 };
 
 void adicionarProduto(produto produtos[], int& quantidadeAtual) {
@@ -18,8 +18,8 @@ void adicionarProduto(produto produtos[], int& quantidadeAtual) {
     cin >> produtos[quantidadeAtual].preco;
     cout << "Quantidade em stock: ";
     cin >> produtos[quantidadeAtual].quantidade;
-    produtos[quantidadeAtual].Id = quantidadeAtual + 1; // Atribuir um ID único baseado na posição
-    produtos[quantidadeAtual].status = 'A';  // Definir o status como Ativo
+    produtos[quantidadeAtual].Id = quantidadeAtual + 1; // Atribuir um ID unico baseado na posição
+    produtos[quantidadeAtual].status = 'A';  // Definir o status como ativo
     quantidadeAtual++;
 }
 
@@ -103,7 +103,7 @@ void eliminarProduto(produto produtos[], int quantidadeAtual) {
     for (int i = 0; i < quantidadeAtual; i++) {
         if (produtos[i].Id == id && produtos[i].status == 'A') {
             encontrado = true;
-            produtos[i].status = 'D';  // Marcar como Eliminado
+            produtos[i].status = 'D';  // Marca como eliminado
             cout << "Produto com ID " << id << " foi eliminado." << endl;
             break;
         }
@@ -115,8 +115,8 @@ void eliminarProduto(produto produtos[], int quantidadeAtual) {
 }
 
 int main() {
-    produto maxProdutos[100]; // máximo de produtos
-    int quantidadeAtual = 0; // quantidade de produtos no estoque
+    produto maxProdutos[100]; // max de produtos
+    int quantidadeAtual = 0; // quantidade de produtos no stock
     int escolha;
 
     do {
